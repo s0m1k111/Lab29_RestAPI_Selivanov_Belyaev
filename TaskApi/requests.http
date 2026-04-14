@@ -54,3 +54,29 @@ Content-Type: application/json
 ### DELETE
 ### Удалить задачу (сначала создайте новую через POST)
 DELETE {{baseUrl}}/api/tasks/4
+
+### PATCH
+### Переключить статус задачи с id=2
+Send Request
+PATCH {{baseUrl}}/api/tasks/2/complete
+
+### DELETE
+### Удалить задачу (сначала создайте новую через POST)
+Send Request
+DELETE {{baseUrl}}/api/tasks/4
+
+### Поиск задач
+Send Request
+GET {{baseUrl}}/api/tasks/search?query=ASP
+
+### Задачи с высоким приоритетом
+Send Request
+GET {{baseUrl}}/api/tasks/priority/High
+
+### Статистика
+Send Request
+GET {{baseUrl}}/api/tasks/stats
+
+### Отсортированные задачи по приоритету
+Send Request
+GET {{baseUrl}}/api/tasks/sorted?by-priority&desc=false
